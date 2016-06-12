@@ -2,6 +2,8 @@
 
 ## Description
 We will create a Scrapy project to crawl the content in the Xiaomi Appstore homepage or any other Appstore homepage. Then Save the crawled content in MongoDB. Install Python MongoDB driver and modify pipelines.py to insert crawled data into MongoDB. Crawl more content by following next page links. 
+
+lalla
 ## Plan
 
 ### Todo List
