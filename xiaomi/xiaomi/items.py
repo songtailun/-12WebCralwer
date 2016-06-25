@@ -12,5 +12,9 @@ from scrapy.item import Item, Field
 class XiaomiItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    title = Field()
-    url = Field()
+    title = scrapy.Field()
+    url = scrapy.Field()
+    appid = scrapy.Field()
+    intro = scrapy.Field()
+    company = scrapy.Field()
+    describe = scrapy.Field()

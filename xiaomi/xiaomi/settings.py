@@ -21,6 +21,19 @@ MONGODB_PORT = 27017
 MONGODB_DB = "Xiaomi" 
 MONGODB_COLLECTION = "Homepage"
 
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'appstore_crawler.random_useragent.RandomUserAgentMiddleware': 400,
+    'scrapyjs.SplashMiddleware': 725,
+   # 'appstore_crawler.random_proxy.RandomProxy': 100
+}
+
+SPLASH_URL = 'http://192.168.99.100:8050'
+# DOWNLOADER_MIDDLEWARES = {
+#     'scrapyjs.SplashMiddleware': 725,
+# }
+DUPEFILTER_CLASS = 'scrapyjs.SplashAwareDupeFilter'
+HTTPCACHE_STORAGE = 'scrapyjs.SplashAwareFSCacheStorage'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'xiaomi (+http://www.yourdomain.com)'
 
